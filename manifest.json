@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Hide LinkedIn Viewed Jobs",
+  "version": "0.1.0",
+  "description": "Hide jobs marked as Viewed in LinkedIn job lists.",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "action": {
+    "default_title": "LinkedIn Viewed Jobs",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.linkedin.com/jobs/*"
+      ],
+      "css": [
+        "content.css"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}

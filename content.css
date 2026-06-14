@@ -1,0 +1,7 @@
+/*
+ * content.js only decides which job cards should be hidden
+ * CSS owns the visual effect, so to restore a card, simply remove this class
+ */
+.hlv-hidden-job {
+  display: none !important;
+}
