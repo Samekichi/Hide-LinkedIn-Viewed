@@ -9,6 +9,8 @@ A small Edge / Chrome extension that hides jobs marked as `Viewed` in LinkedIn j
 - Automatically hides viewed jobs
 - Saves the preference locally
 - Temporarily restores viewed jobs in the current tab
+- Keeps a newly opened job visible until the next page refresh
+- Supports the current `componentkey="job-card-component-ref-*"` job cards
 - Does not collect or transmit user data
 
 ## Install
@@ -21,7 +23,9 @@ A small Edge / Chrome extension that hides jobs marked as `Viewed` in LinkedIn j
 
 ## Limitations
 
-The extension relies on LinkedIn's page structure and visible `Viewed` labels which may change.
+The extension combines job links, data attributes, status attributes, ARIA labels,
+and visible `Viewed` labels to tolerate common LinkedIn layout changes. LinkedIn can
+still change its page structure, so selectors may need maintenance in the future.
 
 ## Disclaimer
 

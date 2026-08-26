@@ -47,7 +47,9 @@ async function initialize() {
   try {
     const state = await sendToCurrentTab({ type: "GET_STATE" });
     temporaryInput.checked = state.temporarilyShowing;
-    setStatus("Connected to LinkedIn Jobs page");
+    setStatus(
+      `Connected: ${state.stats.cards} cards, ${state.stats.viewed} viewed`
+    );
   } catch (error) {
     setStatus(error.message, true);
   }
