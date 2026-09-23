@@ -18,3 +18,6 @@ build/
 *.log
 *.tmp
 *.bak
+
+# Personal learning notes
+/local-notes/
